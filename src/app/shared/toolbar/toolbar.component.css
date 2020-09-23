@@ -1,0 +1,28 @@
+.toolbar {
+    height: 60px;
+    margin: -8px; 
+    display: flex;
+    align-items: center;
+    background-color: #242E42;
+    color: white;
+    font-weight: 600;
+}
+
+.logo {
+    width: 275px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #20293C;
+    font-size: 20pt;
+}
+
+.sidebar-button {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #20293C;
+}
