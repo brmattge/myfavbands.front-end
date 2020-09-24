@@ -1,24 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SidebarModule } from 'primeng/sidebar';
-import { ButtonModule } from 'primeng/button';
-
+import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    ToolbarComponent,
-    SidebarComponent
+    HeaderComponent,
+    
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
-    SidebarModule,
-    ButtonModule
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    MatListModule,
+    RouterModule
   ],
   exports: [
-    ToolbarComponent,
-    SidebarComponent
+    HeaderComponent,
+    
+    SidebarComponent,
   ]
 })
 export class SharedModule { }

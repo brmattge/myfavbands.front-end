@@ -1,0 +1,41 @@
+ul li {
+  list-style: none;
+}
+
+.toolbar {
+  height: 70px;
+  margin: -8px; 
+  display: flex;
+  align-items: center;
+  background-color: #242E42;
+  color: white;
+  margin: 0;
+}
+
+.logo {
+  width: 275px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #20293C;
+  font-size: 20pt;
+}
+
+.header-button {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-toolbar-row{
+  padding: 0;
+  height: 70px;
+  border-bottom: 1px solid #20293C;
+}
+
+.actions {
+  border-left: 1px solid #20293C;
+}

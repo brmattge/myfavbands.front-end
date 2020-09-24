@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
 
@@ -11,15 +11,5 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  visibleSidebar1;
-    
-    visibleSidebar2;
-    
-    visibleSidebar3;
-    
-    visibleSidebar4;
-    
-    visibleSidebar5;
 
 }

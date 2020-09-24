@@ -1,0 +1,27 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+  .profile-card {
+    text-align: center;
+    color: #FFFFFF;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  h2{
+    color: #FFFFFF;
+  }
+
+  a {
+    color: #FFFFFF;
+  }
+
+  .mat-divider {
+    border-top-color: #20293C;
+  }
+}
