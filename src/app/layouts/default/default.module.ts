@@ -5,15 +5,20 @@ import { FavoritasComponent } from 'src/app/modules/favoritas/favoritas.componen
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { CadastrarBandas } from 'src/app/modules/cadastrar-bandas/cadastrar-bandas.component';
+import { CadastroBandas } from 'src/app/modules/cadastrar-bandas/cadastro-bandas.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { CadastroBandasService } from 'src/app/modules/cadastrar-bandas/cadastro-bandas.service';
+import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog'
+import {ButtonModule} from 'primeng/button';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
     FavoritasComponent,
-    CadastrarBandas
+    CadastroBandas
   ],
   imports: [
     CommonModule,
@@ -21,11 +26,16 @@ import { CadastrarBandas } from 'src/app/modules/cadastrar-bandas/cadastrar-band
     SharedModule,
     MatSidenavModule,
     MatDividerModule,
-    FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    ToolbarModule,
+    TableModule,
+    DialogModule,
+    ButtonModule,
+    FlexModule,
+    FlexLayoutModule
   ],
-  providers: [] //SERVICES AQUI
+  providers: [CadastroBandasService] //SERVICES AQUI
 })
 export class DefaultModule { }
