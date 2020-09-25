@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
-import { CadastrarBandas } from './modules/cadastrar-bandas/cadastrar-bandas.component';
+import { CadastroBandas } from './modules/cadastrar-bandas/cadastro-bandas.component';
 import { FavoritasComponent } from './modules/favoritas/favoritas.component';
 
 const routes: Routes = [{
@@ -12,7 +12,7 @@ const routes: Routes = [{
     component: FavoritasComponent
   }, {
     path: 'posts',
-    component: CadastrarBandas
+    component: CadastroBandas
   }]
 }];
 

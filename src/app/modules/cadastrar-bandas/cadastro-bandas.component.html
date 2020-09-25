@@ -1,0 +1,22 @@
+<div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="flex-end" class="actions" >
+    <div fxFlex="100%" fxLayoutGap="20px" style="padding: 7.5px;">
+        <h2>Bandas</h2>
+    </div>
+    <div fxFlex="100%"fxLayoutAlign="end" fxLayoutGap="20px" style="padding: 7.5px; padding-bottom: 0px;">
+        <button pButton type="button" label="Adicionar" (click)="handleClick($event)" ></button>
+    </div>
+    <div ffxFlex="100%" fxLayoutGap="20px" style="padding: 7.5px;">
+        <p-table [value]="cars">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Logo</th>
+                    <th>Ranking</th>
+                    <th>Banda</th>
+                    <th>Estilo</th>
+                    <th>Descobrimento</th>
+                    <th>Status</th>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
