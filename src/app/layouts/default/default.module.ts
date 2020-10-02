@@ -12,7 +12,8 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog'
 import {ButtonModule} from 'primeng/button';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
-
+import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
     DialogModule,
     ButtonModule,
     FlexModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    InputTextModule,
+    CardModule
   ],
   providers: [CadastroBandasService] //SERVICES AQUI
 })

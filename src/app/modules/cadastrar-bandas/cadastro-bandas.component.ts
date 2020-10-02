@@ -11,11 +11,16 @@ import { CadastroBandasService } from './cadastro-bandas.service';
 export class CadastroBandas implements OnInit {
 
   cars: Bandas[];
+  display: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
     //this.cadastroBandasService.cadastrarBandas().then(cars => this.cars = cars);
   }
+
+  showDialog() {
+    this.display = true;
+}
 
 }

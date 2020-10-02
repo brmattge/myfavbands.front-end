@@ -1,10 +1,51 @@
-<div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="flex-end" class="actions" >
+<div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="flex-end" class="actions">
     <div fxFlex="100%" fxLayoutGap="20px" style="padding: 7.5px;">
         <h2>Bandas</h2>
     </div>
-    <div fxFlex="100%"fxLayoutAlign="end" fxLayoutGap="20px" style="padding: 7.5px; padding-bottom: 0px;">
-        <button pButton type="button" label="Adicionar" (click)="handleClick($event)" ></button>
+
+    <div fxFlex="100%" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="20px"
+        style="padding: 7.5px; padding-bottom: 0px;">
+        <p-dialog header="Adicione sua banda favorita" [(visible)]="display"
+            [style]="{width: '1000px', height: '500px'}">
+            <div class="container">
+                <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start">
+                    <div fxFlex="50%">
+                        <p-card>TESTE</p-card>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start">
+                    <div>
+                        <p>Nome da Banda</p>
+                        <input id="input" type="text" size="30" pInputText>
+                    </div>
+                    <div>
+                        <p>Estilo</p>
+                        <input id="input" type="text" size="30" pInputText>
+                    </div>
+                    <div>
+                        <p>Descobrimento</p>
+                        <input id="input" type="text" size="30" pInputText>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <div>
+                    <p>Nome da Banda</p>
+                    <input id="input" type="text" size="30" pInputText>
+                </div>
+                <div>
+                    <p>Estilo</p>
+                    <input id="input" type="text" size="30" pInputText>
+                </div>
+                <div>
+                    <p>Descobrimento</p>
+                    <input id="input" type="text" size="30" pInputText>
+                </div>
+            </div>
+        </p-dialog>
     </div>
+
+    <button type="button" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Adicionar"></button>
     <div ffxFlex="100%" fxLayoutGap="20px" style="padding: 7.5px;">
         <p-table [value]="cars">
             <ng-template pTemplate="header">
