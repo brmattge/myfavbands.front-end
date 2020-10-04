@@ -3,5 +3,16 @@ h2 {
     margin: 0;
 }
 
+.container {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 12%;
+    padding-top: 8.5%;
+}
 
+.buttons-dialog {
+    padding-top: 5%;
+    padding-right: 8.5%;
+}
 

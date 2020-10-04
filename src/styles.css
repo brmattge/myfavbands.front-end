@@ -24,9 +24,32 @@ body .ui-table .ui-table-thead > tr > th {
 }
 
 body .ui-dialog .ui-dialog-content {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #2F3B52;
+  color: #ffffff;
   border: 1px solid #c8c8c8;
   padding: 0.571em 1em;
   height: 100%;
+}
+
+body .ui-dialog .ui-dialog-titlebar {
+  border: 1px solid #c8c8c8;
+  background-color: #2F3B52;
+  color: #ffffff;
+  padding: 1em;
+  font-weight: 700;
+  border-bottom: 0 none;
+}
+
+body .ui-card {
+  background-color: #20293C;
+  color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  width: 300px;
+  height: 250px;
+}
+
+p-card {
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }

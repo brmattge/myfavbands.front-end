@@ -9,11 +9,11 @@
             [style]="{width: '1000px', height: '500px'}">
             <div class="container">
                 <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start">
-                    <div fxFlex="50%">
+                    <div>
                         <p-card>TESTE</p-card>
                     </div>
                 </div>
-                <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start">
+                <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="7.5px">
                     <div>
                         <p>Nome da Banda</p>
                         <input id="input" type="text" size="30" pInputText>
@@ -26,20 +26,19 @@
                         <p>Descobrimento</p>
                         <input id="input" type="text" size="30" pInputText>
                     </div>
+                    <div>
+                        <p-checkbox [(ngModel)]="value" [binary]="true" label="Ativa"></p-checkbox>
+                    </div>
                 </div>
             </div>
-            <div fxFlex="50%">
-                <div>
-                    <p>Nome da Banda</p>
-                    <input id="input" type="text" size="30" pInputText>
-                </div>
-                <div>
-                    <p>Estilo</p>
-                    <input id="input" type="text" size="30" pInputText>
-                </div>
-                <div>
-                    <p>Descobrimento</p>
-                    <input id="input" type="text" size="30" pInputText>
+            <div class="buttons-dialog">
+                <div fxFlex="100%" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="7.5px">
+                    <div>
+                        <button type="button" (click)="showDialog()" pButton label="Cancelar"></button>
+                    </div>
+                    <div>
+                        <button type="button" (click)="showDialog()" pButton label="Cadastrar"></button>
+                    </div>
                 </div>
             </div>
         </p-dialog>
