@@ -12,6 +12,7 @@ export class CadastroBandas implements OnInit {
 
   cars: Bandas[];
   display: boolean = false;
+  value: boolean;
 
   constructor() { }
 
@@ -21,6 +22,6 @@ export class CadastroBandas implements OnInit {
 
   showDialog() {
     this.display = true;
-}
+  }
 
 }
