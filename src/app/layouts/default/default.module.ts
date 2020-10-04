@@ -10,10 +10,14 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { CadastroBandasService } from 'src/app/modules/cadastrar-bandas/cadastro-bandas.service';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog'
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {CheckboxModule} from 'primeng/checkbox';
+import { FormsModule }    from '@angular/forms';
+import {DropdownModule} from "primeng/dropdown";
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import {CardModule} from 'primeng/card';
     FlexModule,
     FlexLayoutModule,
     InputTextModule,
-    CardModule
+    CardModule,
+    CheckboxModule,
+    FormsModule,
+    DropdownModule
   ],
   providers: [CadastroBandasService] //SERVICES AQUI
 })
