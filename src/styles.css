@@ -53,3 +53,12 @@ p-card {
     align-items: center;
     justify-content: center;
 }
+
+body .ui-card-content {
+  padding-top: 25px;
+}
+
+.ui-table {
+  position: relative;
+  padding-top: 7.5px;
+}

@@ -17,6 +17,7 @@ import {CardModule} from 'primeng/card';
 import {CheckboxModule} from 'primeng/checkbox';
 import { FormsModule }    from '@angular/forms';
 import {DropdownModule} from "primeng/dropdown";
+import {FileUploadModule} from 'primeng/fileupload';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {DropdownModule} from "primeng/dropdown";
     CardModule,
     CheckboxModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    FileUploadModule
   ],
   providers: [CadastroBandasService] //SERVICES AQUI
 })
