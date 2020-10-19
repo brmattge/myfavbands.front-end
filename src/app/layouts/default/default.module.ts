@@ -15,9 +15,11 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import {CheckboxModule} from 'primeng/checkbox';
-import { FormsModule }    from '@angular/forms';
+import { FormBuilder, FormsModule }    from '@angular/forms';
 import {DropdownModule} from "primeng/dropdown";
 import {FileUploadModule} from 'primeng/fileupload';
+import { HttpClientModule } from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {FileUploadModule} from 'primeng/fileupload';
     CheckboxModule,
     FormsModule,
     DropdownModule,
-    FileUploadModule
+    FileUploadModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CadastroBandasService] //SERVICES AQUI
 })

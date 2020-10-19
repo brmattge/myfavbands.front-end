@@ -1,6 +1,10 @@
 export interface Bandas {
-    vin;
-    year;
-    brand;
-    color;
-}
+    cdBanda: number,
+    nmBanda: string;
+    dsLogo: string;
+    dsEstilo: string;
+    tpRanking: string;
+    idAtivo: number;
+    dtDescobrimento: string;
+
+  }

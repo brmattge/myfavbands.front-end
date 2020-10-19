@@ -62,3 +62,12 @@ body .ui-card-content {
   position: relative;
   padding-top: 7.5px;
 }
+
+body .ui-table .ui-table-tbody > tr {
+  background-color: #20293C;
+  color: #ffffff;
+}
+
+body .ui-table .ui-table-tbody > tr:nth-child(even) {
+  background-color: #20293C;
+}
