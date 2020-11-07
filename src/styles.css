@@ -71,3 +71,62 @@ body .ui-table .ui-table-tbody > tr {
 body .ui-table .ui-table-tbody > tr:nth-child(even) {
   background-color: #20293C;
 }
+
+body .ui-inputtext {
+  margin: 0;
+  outline: medium none;
+  padding: .25em;
+  font-weight: normal;
+  width: 250px;
+}
+
+body .ui-datepicker table td {
+   padding: 0;
+}
+
+body .ui-paginator {
+  background-color: #3E4E6C;
+  border: 1px solid #c8c8c8;
+  padding: 0;
+}
+
+body .ui-paginator .ui-paginator-pages .ui-paginator-page {
+  color: #ffffff;
+  height: 2.286em;
+  min-width: 2.286em;
+  border: 0 none;
+  line-height: 2.286em;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+body .ui-paginator .ui-paginator-next, body .ui-paginator .ui-paginator-last {
+  color: #20293C;
+  height: 2.286em;
+  min-width: 2.286em;
+  border: 0 none;
+  line-height: 2.286em;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+body .ui-paginator .ui-paginator-first, body .ui-paginator .ui-paginator-prev, body .ui-paginator .ui-paginator-next, body .ui-paginator .ui-paginator-last {
+  color: #20293C;
+  height: 2.286em;
+  min-width: 2.286em;
+  border: 0 none;
+  line-height: 2.286em;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+body .ui-dropdown label.ui-dropdown-label {
+  cursor: pointer;
+  width: 248px;
+}
