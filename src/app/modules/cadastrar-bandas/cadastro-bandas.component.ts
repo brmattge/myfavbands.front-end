@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Bandas } from './cadastro-bandas.model';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { SelectItem } from 'primeng/api';
+import { Observable } from 'rxjs';
+import { Bandas } from './Models/cadastro-bandas.model';
 import { CadastroBandasService } from './cadastro-bandas.service';
 
+interface City {
+  tpRanking: string;
+}
 
 @Component({
   selector: 'app-cadastro-bandas',
@@ -11,31 +16,34 @@ import { CadastroBandasService } from './cadastro-bandas.service';
 })
 export class CadastroBandas implements OnInit {
 
-  
-  display: boolean = false;
-  value: boolean;
-  bandasForm: any;  
-
+  salvou = false;
+  mostrar: boolean = false;
+  formulario: any;
   bandas: Bandas[];
 
-  constructor(private formbulider: FormBuilder,
-              private cadastroBandasService : CadastroBandasService) { }
+  ranking = [
+    { label: 'A', value: 'A' },
+    { label: 'B', value: 'B' },
+    { label: 'C', value: 'C' }
+  ]
+
+
+  constructor(private formBuilder: FormBuilder,
+              private cadastroBandasService: CadastroBandasService) { }
 
   ngOnInit() {
-    this.bandasForm = this.formbulider.group({  
-      cdBanda: [null],  
-      nmBanda: [null],
-      dsLogo: [null],
-      dsEstilo: [null],
-      tpRanking: [null],
-      idAtivo: [null],
-      dtDescobrimento: [null]
-    });  
+    this.formulario = this.formBuilder.group({
+      cdBanda: [null],
+      nmBanda: [null, Validators.required],
+      tpRanking: [null, Validators.required],
+      nmEstilo: [null, Validators.required],
+      dtDescobrimento: [null, Validators.required],
+    });
     this.obterTodasBandas();
   }
 
-  showDialog() {
-    this.display = true;
+  mostrarDialogo() {
+    this.mostrar = true;
   }
 
   obterTodasBandas() {
@@ -44,12 +52,25 @@ export class CadastroBandas implements OnInit {
   }
 
   adicionarBanda(banda: Bandas) {
-      this.cadastroBandasService.adicionarBanda(banda).subscribe(  
-        () => {
-          this.obterTodasBandas();
-          this.bandasForm.reset();
-        }  
-      );
+    this.cadastroBandasService.adicionarBanda(banda).subscribe(
+      () => {
+        this.salvou = true;
+        this.obterTodasBandas();
+        this.formulario.reset();
+      }
+    );
+  }
+
+  onFormSubmit() {
+    this.salvou = false;
+    const banda = this.formulario.value;
+    this.adicionarBanda(banda);
+    this.formulario.reset();
+  }
+
+  resetForm() {
+    this.formulario.reset();
+    this.salvou = false;
   }
 
 }
