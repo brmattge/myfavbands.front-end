@@ -20,6 +20,12 @@ import {DropdownModule} from "primeng/dropdown";
 import {FileUploadModule} from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {  
+  MatButtonModule, MatMenuModule, MatDatepickerModule,MatNativeDateModule , MatIconModule, 
+   MatFormFieldModule,  
+  MatInputModule, MatTooltipModule, MatToolbarModule  
+  } from '@angular/material'; 
+  import {CalendarModule} from 'primeng/calendar';
 
 
 @NgModule({
@@ -50,7 +56,19 @@ import {ReactiveFormsModule} from '@angular/forms';
     DropdownModule,
     FileUploadModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,  
+    MatMenuModule,  
+    MatDatepickerModule,  
+    MatNativeDateModule,  
+    MatIconModule,  
+    MatCardModule,  
+    MatSidenavModule,  
+    MatFormFieldModule,  
+    MatInputModule,  
+    MatTooltipModule,  
+    MatToolbarModule, 
+    CalendarModule
   ],
   providers: [CadastroBandasService] //SERVICES AQUI
 })
