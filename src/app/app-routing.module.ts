@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { CadastroBandas } from './modules/cadastrar-bandas/cadastro-bandas.component';
-import { FavoritasComponent } from './modules/favoritas/favoritas.component';
+import { BandasFavoritasComponent } from './modules/bandas-favoritas/bandas-favoritas.component';
 
 const routes: Routes = [{
   path: '',
   component: DefaultComponent,
   children: [{
     path: '',
-    component: FavoritasComponent
+    component: BandasFavoritasComponent
   }, {
     path: 'posts',
     component: CadastroBandas
