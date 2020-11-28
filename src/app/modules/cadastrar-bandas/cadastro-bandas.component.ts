@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { SelectItem } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { Bandas } from './Models/cadastro-bandas.model';
-import { CadastroBandasService } from './cadastro-bandas.service';
+import { CadastroBandasService } from './Services/cadastro-bandas.service';
 
 interface City {
   tpRanking: string;
@@ -26,7 +26,6 @@ export class CadastroBandas implements OnInit {
     { label: 'B', value: 'B' },
     { label: 'C', value: 'C' }
   ]
-
 
   constructor(private formBuilder: FormBuilder,
               private cadastroBandasService: CadastroBandasService) { }
@@ -66,11 +65,6 @@ export class CadastroBandas implements OnInit {
     const banda = this.formulario.value;
     this.adicionarBanda(banda);
     this.formulario.reset();
-  }
-
-  resetForm() {
-    this.formulario.reset();
-    this.salvou = false;
   }
 
 }
