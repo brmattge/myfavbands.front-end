@@ -18,9 +18,8 @@ export class BandasFavoritasComponent implements OnInit {
     ngOnInit() {
 
         this.colunas = [
-            //{ field: '', header: 'Logo' }
-            { field: 'tpRanking', header: 'Ranking' },
             { field: 'nmBanda', header: 'Banda' },
+            { field: 'tpRanking', header: 'Ranking' },
             { field: 'nmEstilo', header: 'Estilo' },
             { field: 'dtDescobrimento', header: 'Descobrimento' }
         ];
