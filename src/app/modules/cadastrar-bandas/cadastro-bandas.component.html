@@ -5,52 +5,36 @@
     </div>
 
     <div fxFlex="100%" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="20px"
-         style="padding: 7.5px; padding-bottom: 0px;">
-        <p-dialog appendTo="body" header="Adicione sua banda favorita" [(visible)]="mostrar" [style]="{width: '1000px', height: '500px'}" 
-                  [modal]="true">
+        style="padding: 7.5px; padding-bottom: 0px;">
+        <p-dialog appendTo="body" header="Adicione sua banda favorita" [(visible)]="mostrar" [modal]="true">
             <form [formGroup]="formulario" (ngSubmit)="onFormSubmit(formulario.value)">
                 <div class="container">
-                    <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start">
-                        <div>
-                            <p-card>
-                                <div style="display: flex; align-items: center; justify-content: center;">
-                                    <i class="far fa-image fa-10x"></i>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: center;">
-                                    Adicionar imagem
-                                </div>
-                            </p-card>
-                        </div>
-                    </div>
-                    <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="7.5px">
-                        <div>
+                    <div fxFlex="100%" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="7.5px">
+                        <ng-container>
                             <p>Nome da Banda</p>
                             <input formControlName="nmBanda" type="text" size="30" pInputText>
-                        </div>
-                        <div>
-                            <p>Ranking</p>
-                            <p-dropdown formControlName="tpRanking" [optionLabel]="label" [options]="ranking" placeholder="Selecione um ranking"></p-dropdown>
-
-                        </div>
-                        <div>
+                        </ng-container>
+                        <p>Ranking</p>
+                        <p-dropdown formControlName="tpRanking" [optionLabel]="label" [options]="ranking"
+                            placeholder="Selecione um ranking"></p-dropdown>
+                        <ng-container>
                             <p>Estilo</p>
                             <input formControlName="nmEstilo" type="text" size="30" pInputText>
-                        </div>
-                        <div>
+                        </ng-container>
+                        <ng-container>
                             <p>Descobrimento</p>
-                            <p-calendar formControlName="dtDescobrimento" dateFormat="dd/mm/yy" [yearNavigator]="true" yearRange="2000:2030"></p-calendar>
-                        </div>
+                            <p-calendar formControlName="dtDescobrimento" dateFormat="dd/mm/yy" [yearNavigator]="true"
+                                yearRange="2000:2030"></p-calendar>
+                        </ng-container>
                     </div>
                 </div>
                 <div class="buttons-dialog">
-                    <div fxFlex="100%" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="7.5px">
-                        <div>
+                    <ng-container>
+                        <div fxFlex="100%" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="7.5px">
                             <button type="button" (click)="mostrar=false" pButton label="Cancelar"></button>
-                        </div>
-                        <div>
                             <button type="submit" pButton label="Cadastrar" [disabled]="!formulario.valid"></button>
                         </div>
-                    </div>
+                    </ng-container>
                 </div>
             </form>
         </p-dialog>
@@ -60,18 +44,16 @@
     <p-table [value]="bandas" [paginator]="true" [rows]="20">
         <ng-template pTemplate="header">
             <tr>
-                <th>Logo</th>
-                <th>Ranking</th>
                 <th>Banda</th>
+                <th>Ranking</th>
                 <th>Estilo</th>
                 <th>Descobrimento</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-bandas>
             <tr>
-                <td></td>
-                <td>{{bandas.tpRanking}}</td>
                 <td>{{bandas.nmBanda}}</td>
+                <td>{{bandas.tpRanking}}</td>
                 <td>{{bandas.nmEstilo}}</td>
                 <td>{{bandas.dtDescobrimento}}</td>
             </tr>
